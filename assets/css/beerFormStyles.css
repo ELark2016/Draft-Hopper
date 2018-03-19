@@ -1,0 +1,14 @@
+.nav-extended {
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+
+h1 {
+  font-weight: 600;
+  /* font-size: 5em; */
+}
+
+body {
+  /* background-image: url("../images/spiration.png");*/
+  background-color: grey;
+}
