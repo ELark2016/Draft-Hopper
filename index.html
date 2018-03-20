@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Draft Hopper | Find Great Brews</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+
+  <nav class="grey" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img src="assets/images/logo_yellow.png" alt="" width="150"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a id="location-finder" class="waves-effect waves-light btn">Breweries Near Me</a></li>
+        </ul>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+    
+  
+  <section class="no-pad-bot">
+    <div class="container">
+      <div class="row">
+        <div class="col s4">
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="col s8">
+          <div id="mapid">map goes here</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section valign-wrapper no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <div class="col s12">
+          <h5 class="header light">Find craft breweries in the Commonwealth of Virginia.</h5>
+          <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    
+  <section class="parallax-container valign-wrapper section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <div class="col s12">
+          <h5 class="header light">craft brew·er·y<br>
+          noun<br><br>
+          a small brewery that produces beer in a traditional or non-mechanized way.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/images/taps.jpg" alt="Unsplashed background img 2"></div>
+  </section>
+    
+
+  <section class="section">
+    <div class="container">
+      <div class="row center">
+        <div class="col s12">
+        <h4>What's your Beer Style?</h4>
+          <div class="row">
+            <div class="col s12">
+              <ul class="tabs">
+                <li class="tab"><a class="active" href="#test1">Test 1</a></li>
+                <li class="tab"><a href="#test2">Test 2</a></li>
+                <li class="tab"><a href="#test3">Test 3</a></li>
+                <li class="tab"><a href="#test4">Test 4</a></li>
+                <li class="tab"><a href="#test5">Test 5</a></li>
+                <li class="tab"><a href="#test6">Test 6</a></li>
+                <li class="tab"><a href="#test7">Test 7</a></li>
+                <li class="tab"><a href="#test8">Test 8</a></li>
+                <li class="tab"><a href="#test9">Test 9</a></li>
+                <li class="tab"><a href="#test10">Test 10</a></li>
+              </ul>
+            </div>
+            <div id="test1" class="col s12">Test 1</div>
+            <div id="test2" class="col s12">Test 2</div>
+            <div id="test3" class="col s12">Test 3</div>
+            <div id="test4" class="col s12">Test 4</div>
+            <div id="test5" class="col s12">Test 5</div>
+            <div id="test6" class="col s12">Test 6</div>
+            <div id="test7" class="col s12">Test 7</div>
+            <div id="test8" class="col s12">Test 8</div>
+            <div id="test9" class="col s12">Test 9</div>
+            <div id="test10" class="col s12">Test 10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="hide-on-large-only">
+          <a class="waves-effect waves-light btn">button</a>
+        </div>
+        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Minified jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+  <script>
+
+  (function($){
+    $(function(){
+      $('.button-collapse').sideNav();
+      $('.parallax').parallax();
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+
+  </script>
+  
+</body>
+</html>
+
+
