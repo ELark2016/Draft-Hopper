@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="col s8">
-          <div id="mapid">map goes here</div>
+          <div id="map"></div>
         </div>
       </div>
     </div>
@@ -134,23 +134,27 @@
 
 
   <!-- Minified jQuery -->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+  <!-- Google Stuff -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM&libraries=places&callback=initMap" async defer></script>
+
+  <!-- Custon javascript -->
+  <!-- <script src="assets/js/beerData.js"></script> -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/map.js"></script>
 
   <script>
-
+  // Parallax
   (function($){
     $(function(){
       $('.button-collapse').sideNav();
       $('.parallax').parallax();
     }); // end of document ready
   })(jQuery); // end of jQuery name space
-
   </script>
   
 </body>
