@@ -1,2 +1,2 @@
 # Draft-Hopper
-Team Project 1
+Brewery finder app specializing in breweries in the Commonwealth of Virginia.
