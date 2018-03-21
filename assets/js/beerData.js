@@ -11,39 +11,76 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-$("document").on("load", function() {
-  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
-    console.log(childSnapshot.val());
-    var beerStyle = childSnapshot.val().beerStyle;
-    var beerABV = childSnapshot.val().beerABV;
-    var beerBody = childSnapshot.val().beerBody;
-    var beerColor = childSnapshot.val().beerColor;
-    var glassType = childSnapshot.val().glassType;
-    var servingTemp = childSnapshot.val().servingTemp;
-    
-    var newTab = $("<li>" + "<a class='active' href='#test1'>" + beerStyle + "</a></li>");
+database.ref().on("child_added", function (childSnapshot, prevChildKey) {
+  console.log(childSnapshot.val());
 
-    $("#beerTabs").append(newTab);
+  var beerStyle = childSnapshot.val().beerStyle;
+  var beerABV = childSnapshot.val().beerABV;
+  var beerBody = childSnapshot.val().beerBody;
+  var beerColor = childSnapshot.val().beerColor;
+  var glassType = childSnapshot.val().glassType;
+  var servingTemp = childSnapshot.val().servingTemp;
 
+  // var newBeer = $("<li>");
+  var newTab = ("<li class='tab'>" + "<a class='active' href='#" + beerStyle + "'>" + beerStyle + "</a></li>");
+
+  var newRow = [
+    `
+      <div id="${beerStyle}" class="col s12">
+        <div class="row">
+          <div class="col s12 m12">
+            <h2 class="header">${beerStyle}</h2>
+            <div class="card horizontal"> <!--Center content in card-->
+              <div class="card-image">
+                <img src="assets/images/beers/placeholder.jpg">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content valign-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th colspan="2">The Beer Facts:</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Body: </td>
+                        <td>${beerBody}</td>
+                      </tr>
+                      <tr>
+                        <td>Color: </td>
+                        <td>${beerColor}</td>
+                      </tr>                            
+                      <tr>
+                        <td>ABV: </td>
+                        <td>${beerABV}</td>
+                      </tr>
+                      <tr>
+                        <td>Glass Style: </td>
+                        <td>${glassType}</td>
+                      </tr>
+                      <tr>
+                        <td>Serving Temperature: </td>
+                        <td>${servingTemp}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
-    // $("#beerTabs").append
+      </div>
+    `
 
-    // $("#trainSchedule").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + moment().minute(timeTillNext).format("mm") + "</td>");
-  });
+  ];  
+
+  $("#beerTabs").append(newTab);
+  $("#beerInfo").append(newRow);
 
 });
-
-// var tbody = $("tbody");
-      
-//       // Create and save a reference to new empty table row
-//       var trow = $("<tr>");
-
-//       // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-//       var tdTitle = $("<td>").text(response.Title);
-//       var tdYear = $("<td>").text(response.Year);
-//       var tdActors = $("<td>").text(response.Actors);
-
-//       // Append the td elements to the new table row
-//       trow.append(tdTitle, tdYear, tdActors);
-//       // Append the table row to the tbody element
-//       tbody.append(trow);
