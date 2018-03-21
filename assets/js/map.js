@@ -5,10 +5,6 @@ var infowindow;
 var userLocation = [];
 
 function initMap() {
-  //var lat = $('#id').val().trim(); replace values in the LatLng method below
-  //var lng = $('#id').val().trim();
-
-  // var userLocation = [];
 
   if (!navigator.geolocation){
     output.innerHTML = "Geolocation is not supported by your browser";
@@ -40,51 +36,50 @@ function initMap() {
     radius: '500',
     query: 'brewery'
   };
-  infowindow = new google.maps.InfoWindow();
-  service = new google.maps.places.PlacesService(map);
-  service.textSearch(request, callback);
+  
 }
 
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      var place = results[i];
-      // createMarker(results[i]);
-    }
-  }
-}
+  $("#location-finder").on("click", function initMap() {
+      
+    var breweriesNearMe = new google.maps.LatLng(userLocation[0], userLocation[1]);
+      
+    map2 = new google.maps.Map(document.getElementById('map'), {
+      center: breweriesNearMe,
+      zoom: 13
+    });
+      
+    var request = {
+      location: breweriesNearMe,
+      radius: '500',
+      query: 'brewery'
 
-function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location
-        });
+    };
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
-        });
+    infowindow = new google.maps.InfoWindow();
+    service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
+
+    function callback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          var place = results[i];
+          createMarker(results[i]);
+        }
       }
+    }
 
+    function createMarker(place) {
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map2,
+        position: place.geometry.location
+    });
+  
+    google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+      });
+      }
+})
 
-      $("#location-finder").on("click", function() {
-        //var lat = $('#id').val().trim(); replace values in the LatLng method below
-        //var lng = $('#id').val().trim();
       
-        var breweriesNearMe = new google.maps.LatLng(userLocation[0], userLocation[1]);
-      
-        map2 = new google.maps.Map(document.getElementById('map'), {
-            center: breweriesNearMe,
-            zoom: 13
-          });
-      
-        var request = {
-          location: breweriesNearMe,
-          radius: '500',
-          query: 'brewery'
-
-          
-        };
-
-      })
