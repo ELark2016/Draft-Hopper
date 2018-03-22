@@ -69,9 +69,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
                     </tbody>
                   </table>
                 </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div>
+                
               </div>
             </div>
           </div>
