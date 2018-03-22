@@ -12,8 +12,8 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 database.ref().on("child_added", function (childSnapshot, prevChildKey) {
-  console.log(childSnapshot.val());
-
+  // console.log(childSnapshot.val());
+  
   var beerStyle = childSnapshot.val().beerStyle;
   var beerABV = childSnapshot.val().beerABV;
   var beerBody = childSnapshot.val().beerBody;
@@ -21,15 +21,15 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   var glassType = childSnapshot.val().glassType;
   var servingTemp = childSnapshot.val().servingTemp;
 
-  // var newBeer = $("<li>");
+
   var newTab = ("<li class='tab'>" + "<a class='active' href='#" + beerStyle + "'>" + beerStyle + "</a></li>");
 
+  // var testRow = [`<div id="${beerStyle}" class="col s12">${beerABV}, ${beerBody}, ${beerColor}</div>`]
   var newRow = [
     `
       <div id="${beerStyle}" class="col s12">
         <div class="row">
           <div class="col s12 m12">
-            <h2 class="header">${beerStyle}</h2>
             <div class="card horizontal"> <!--Center content in card-->
               <div class="card-image">
                 <img src="assets/images/beers/placeholder.jpg">
@@ -39,7 +39,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
                   <table>
                     <thead>
                       <tr>
-                        <th colspan="2">The Beer Facts:</th>
+                        <th colspan="2">${beerStyle} Facts:</th>
                       </tr>
                     </thead>
 
@@ -77,10 +77,16 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
       
       </div>
     `
-
   ];  
 
   $("#beerTabs").append(newTab);
   $("#beerInfo").append(newRow);
+  // $("#beerInfo").append(testRow);
 
+  
 });
+
+$(document).ready(function () {
+    $('ul.tabs').tabs();
+    $('ul.tabs').tabs('select_tab', beerStyle);
+  });
