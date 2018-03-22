@@ -10,6 +10,7 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+var index = 0;
 
 database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   // console.log(childSnapshot.val());
@@ -21,13 +22,14 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   var glassType = childSnapshot.val().glassType;
   var servingTemp = childSnapshot.val().servingTemp;
 
-
-  var newTab = ("<li class='tab'>" + "<a class='active' href='#" + beerStyle + "'>" + beerStyle + "</a></li>");
-
-  // var testRow = [`<div id="${beerStyle}" class="col s12">${beerABV}, ${beerBody}, ${beerColor}</div>`]
+  var newTab = ("<li class='tab'>" + "<a class='active' href='#beer" + index + "'>" + beerStyle + "</a></li>");
+  var newRow = [`
+      <div id="beer${index}" class="col s12">${beerStyle} at Index: ${index}</div>
+  `];
+  
   var newRow = [
     `
-      <div id="${beerStyle}" class="col s12">
+      <div id="beer${index}" class="col s12" style="display: none">
         <div class="row">
           <div class="col s12 m12">
             <div class="card horizontal"> <!--Center content in card-->
@@ -82,7 +84,9 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   $("#beerTabs").append(newTab);
   $("#beerInfo").append(newRow);
   // $("#beerInfo").append(testRow);
-
+  index++;
+  console.log(index);
+  
   
 });
 
@@ -90,3 +94,7 @@ $(document).ready(function () {
     $('ul.tabs').tabs();
     $('ul.tabs').tabs('select_tab', beerStyle);
   });
+// $(document).ready(function(){
+//   $('.tabs').tabs();
+// });
+
