@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Draft Hopper | Find Great Brews</title>
+  <title>Draft Hopper | Find Great Local Breweries</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+  <!--Custom Styles-->
   <link rel="stylesheet" href="assets/css/styles.css">
-
 </head>
 <body>
-
+  
   <nav class="grey" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><img src="assets/images/logo_yellow.png" alt="" width="150"></a>
         <ul class="right hide-on-med-and-down">
-          <li><a id="location-finder" class="waves-effect waves-light btn">Breweries Near Me</a></li>
+          <li><a id="location-finder" class="btn-large"><i class="material-icons right">near_me</i>Breweries Near Me</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#">Navbar Link</a></li>
@@ -31,14 +31,34 @@
   </nav>
     
   
-  <section class="no-pad-bot">
+  <section class="section grey lighten-4">
     <div class="container">
       <div class="row">
-        <div class="col s4">
+        <div id="breweries" class="col s12 m4">
           <ul class="collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+              <div class="collapsible-header active">Brewery Name</div>
+              <div class="collapsible-body">
+
+                  <div class="card">
+                      <div class="card-image">
+                        <img src="https://richmondbizsense.com/wp-content/uploads/images/Hardywood-3.jpg">
+
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                      </div>
+                      <div class="card-content">
+                        <ul>
+                          <li><i class="material-icons">location_on</i>Address</li>
+                          <li><i class="material-icons">local_phone</i>Phone #</li>
+                          <li><i class="material-icons">access_time</i>Hours</li>
+                        </ul>
+                      </div>
+                      <div class="card-action">
+                          <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                
+              </div>
             </li>
             <li>
               <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
@@ -48,9 +68,25 @@
               <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
               <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
             </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+              </li>
+              <li>
+                  <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                  </li>
+                  <li>
+                      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
           </ul>
         </div>
-        <div class="col s8">
+        <div class="col s12 m8">
           <div id="map"></div>
         </div>
       </div>
@@ -58,30 +94,19 @@
   </section>
 
 
-  <section class="section valign-wrapper no-pad-bot">
+  <section class="section grey lighten-2 valign-wrapper">
     <div class="container">
       <div class="row center">
         <div class="col s12">
           <h5 class="header light">Find craft breweries in the Commonwealth of Virginia.</h5>
-          <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          <p class="flow-text">Discover the best local bars, breweries, tasting rooms, and bottle shops around you and wherever you go.</p>
         </div>
       </div>
     </div>
   </section>
     
     
-  <section class="parallax-container valign-wrapper section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-        <div class="col s12">
-          <h5 class="header light">craft brew·er·y<br>
-          noun<br><br>
-          a small brewery that produces beer in a traditional or non-mechanized way.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/taps.jpg" alt="Unsplashed background img 2"></div>
-  </section>
+  
     
 
   <section class="section">
@@ -92,42 +117,52 @@
           <div class="row">
             <div class="col s12">
               <ul class="tabs">
-                <li class="tab"><a class="active" href="#test1">Test 1</a></li>
-                <li class="tab"><a href="#test2">Test 2</a></li>
-                <li class="tab"><a href="#test3">Test 3</a></li>
-                <li class="tab"><a href="#test4">Test 4</a></li>
-                <li class="tab"><a href="#test5">Test 5</a></li>
-                <li class="tab"><a href="#test6">Test 6</a></li>
-                <li class="tab"><a href="#test7">Test 7</a></li>
-                <li class="tab"><a href="#test8">Test 8</a></li>
-                <li class="tab"><a href="#test9">Test 9</a></li>
-                <li class="tab"><a href="#test10">Test 10</a></li>
               </ul>
             </div>
-            <div id="test1" class="col s12">Test 1</div>
-            <div id="test2" class="col s12">Test 2</div>
-            <div id="test3" class="col s12">Test 3</div>
-            <div id="test4" class="col s12">Test 4</div>
-            <div id="test5" class="col s12">Test 5</div>
-            <div id="test6" class="col s12">Test 6</div>
-            <div id="test7" class="col s12">Test 7</div>
-            <div id="test8" class="col s12">Test 8</div>
-            <div id="test9" class="col s12">Test 9</div>
-            <div id="test10" class="col s12">Test 10</div>
+            <div id="beerInfo"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="section valign-wrapper no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <div class="col s12">
+            
+            <!--   Icon Section   -->
+        <div class="row">
+            <h2 class="center teal-text text-lighten-3">Brews News</h2>
+            
+            <div class="col s12 m6">
+                
+                
+              <div class="icon-block">
+                <h2 class="center teal-text text-lighten-3"><i class="material-icons">visibility</i></h2>
+                <h5 class="center">Virginia Craft Beer News:</h5>
+                <div id="feed"></div>
+              </div>
+            </div>
+    
+            <div class="col s12 m6">
+                <div class="video-container">
+                    <iframe width="500" height="480" src="https://www.youtube.com/embed/ETnlrYq7btE" frameborder="0" allowfullscreen></iframe>
+                  </div>
+            </div>
+    
+            
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer class="page-footer">
+
+  <footer class="page-footer grey">
     <div class="footer-copyright">
       <div class="container">
-        <div class="hide-on-large-only">
-          <a class="waves-effect waves-light btn">button</a>
-        </div>
-        Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        Made by <a class="teal-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
   </footer>
@@ -142,22 +177,45 @@
   <!-- Google Stuff -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM&libraries=places&callback=initMap" async defer></script>
 
+  <script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
+
   <!-- Custon javascript -->
   <!-- <script src="assets/js/beerData.js"></script> -->
   <script src="assets/js/app.js"></script>
   <script src="assets/js/map.js"></script>
 
   <script>
-  // Parallax
+ 
   (function($){
     $(function(){
       $('.button-collapse').sideNav();
-      $('.parallax').parallax();
+      $('ul.tabs').tabs();
     }); // end of document ready
   })(jQuery); // end of jQuery name space
+
+
+google.load("feeds", "1");
+
+function initialize() {
+  var feed = new google.feeds.Feed("https://news.google.com/news/rss/search/section/q/virginia%20craft%20beer/virginia%20craft%20beer?hl=en&gl=US&ned=us",{
+        count : 5
+      });
+  feed.load(function(result) {
+    if (!result.error) {
+      var container = document.getElementById("feed");
+      for (var i = 0; i < result.feed.entries.length; i++) {
+        var entry = result.feed.entries[i];
+        // var div = document.createElement("div");
+        // div.appendChild(document.createTextNode(entry.title));
+        // container.appendChild(div);
+        $("#feed").append("<div><a href='" + entry.link + "' target='-blank'>" + entry.title + "</a><br>" + entry.publishedDate + "<div>");
+      }
+    }
+  });
+}
+google.setOnLoadCallback(initialize);
+
   </script>
   
 </body>
 </html>
-
-
