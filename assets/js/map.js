@@ -76,10 +76,20 @@ function initMap() {
     });
   
     google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
+    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<strong>Rating: </strong>' + place.rating + '</div>');  
     infowindow.open(map, this);
       });
       }
+
+      var userMarker = new google.maps.Marker({
+        position: breweriesNearMe,
+        map: map2
+    });
+
+    google.maps.event.addListener(userMarker, 'click', function() {
+      infowindow.setContent('<div><strong>YOU ARE HERE</strong></div>');  
+      infowindow.open(map, this);
+        });
 })
 
       
