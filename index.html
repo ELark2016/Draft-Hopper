@@ -43,42 +43,59 @@
     <div class="container">
       <div class="row flex-s">
         <div id="breweries" class="col s12 m4 box-a">
-          <ul id="brewery-list-item" class="collapsible" data-collapsible="accordion">
-            <li>
-              <div class="collapsible-header active">Brewery Name</div>
-              <div class="collapsible-body">
-                <div class="card">
-                  <div class="card-image"><img src="https://richmondbizsense.com/wp-content/uploads/images/Hardywood-3.jpg"></a>
-                  </div>
-                  <div class="card-content">
-                    <ul class="collection">
-                        <li class="collection-item avatar">
-                          <i class="material-icons">location_on</i>
-                          <span class="title">6118 Lakeside Ave, Henrico, VA 23228, USA</span>
-                        </li>
-                        <li class="collection-item avatar">
-                          <i class="material-icons">local_phone</i>
-                          <span class="title">804-867-5309</span>
-                        </li>
-                        <li class="collection-item avatar">
-                          <i class="material-icons">access_time</i>
-                          <span class="title">Open Now</span>
-                        </li>
-                      </ul>
-                  </div>
-                  <div class="card-action"><a href="#">Visit Website</a></div>
-                </div>
+          <div class="card-medium">
+            <div class="card-content">
+              <p>Draft Hopper helps beer lovers find great craft breweries and tasting rooms around them, wherever they go. Specializing in breweries home grown in the Commonwealth of Virginia.</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#test1">Discover</a></li>
+                <li class="tab"><a href="#test2">Learn</a></li>
+                <li class="tab"><a href="#test3">Enjoy</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="test1" class="icon-block">
+                <h2 class="center"><i class="material-icons">lightbulb_outline</i></h2>
+                <h3 class="center">Discover</h3>
+                <p class="light">Use your current location to find breweries no matter where you are. Click on a map pin to discover more about a brewery.</p>
               </div>
-            </li>
-            <li>
-              <div class="collapsible-header active">Brewery Name</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header active">Brewery Name</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-          </ul>
+              <div id="test2" class="icon-block">
+                  <h2 class="center"><i class="material-icons">remove_red_eye</i></h2>
+                  <h3 class="center">Learn</h3>
+                  <p class="light">Read current news on Virginia Craft Beers and even learn about the history of craft beer.</p></div>
+              <div id="test3" class="icon-block">
+                <h2 class="center"><i class="material-icons">favorite</i></h2>
+                <h3 class="center">Enjoy</h3>
+                <p class="light">Enjoy discovering new beer while hopping around to your local breweries.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-image" id="brewery-image">
+            </div>
+            
+            <div class="new-card-content">
+              <div class="card-title" id="brewery-name"></div>
+              <ul class="collection">
+                    <li class="collection-item avatar">
+                    <i class="material-icons">location_on</i>
+                    <span class="title" id="brewery-address"></span>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons">local_phone</i>
+                    <span class="title" id="brewery-phone"></span>
+                  </li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons">access_time</i>
+                    <span class="title" id="brewery-open"></span>
+                  </li>
+                </ul>
+            </div>
+            <div class="card-action" id="brewery-website"></div>
+          </div>
+
         </div>
         <div class="col s12 m8 box-b">
           <div id="map"></div>
@@ -96,7 +113,8 @@
     <div class="parallax"><img src="assets/images/taps.jpg" alt="Unsplashed background img 1"></div>
   </section>
 
-  <section class="section valign-wrapper">
+
+  <section class="section valign-wrapper grey lighten-4">
     <div class="container">
       <div class="row center">
         <div class="col s12">
@@ -118,7 +136,7 @@
   </section>
 
 
-  <section class="section grey lighten-4">
+  <section class="section">
     <div class="container">
       <div class="row center">
         <div class="col s12"> 
@@ -142,7 +160,7 @@
   <footer class="page-footer grey">
     <div class="footer-copyright">
       <div class="container">
-        &copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://materializecss.com"><img src="assets/images/GitHub-Mark-Light-32px.png" width="16" height="16"> View Github Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Admin</a>
+        &copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img src="assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" target="_blank">Admin</a>
       </div>
     </div>
   </footer>
