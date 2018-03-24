@@ -4,8 +4,11 @@ var service;
 var infowindow;
 var userLocation = [];
 
-function initMap() {
+$(".card-medium").show();
+$(".card").hide();
 
+function initMap() {
+  
   if (!navigator.geolocation){
     output.innerHTML = "Geolocation is not supported by your browser";
     return;
@@ -61,7 +64,7 @@ $("#location-finder").on("click", function initMap() {
       for (var i = 0; i < results.length; i++) {
         var place = results[i];
         createMarker(results[i]);
-        console.log(results);
+        // console.log(results);
       }
     }
   }
@@ -89,16 +92,39 @@ $("#location-finder").on("click", function initMap() {
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<strong>Rating: </strong>' + place.rating + '<br><strong>Address: </strong>' + place.formatted_address + '</div>');
       infowindow.open(map, this); 
+      $(".card-medium").hide();
+      $(".card").show();
+
       $("#brewery-name").text(place.name);
       $("#brewery-address").text(place.formatted_address);
       $.ajax({
         method: 'GET',
         url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid="+place.place_id+"&key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM"
       }).then(function(data) {
-          $("#brewery_phone").text(data.result.formatted_phone_number)
-          $("#brewery-website").text(data.result.website)
-      });
-      $("#open-now").text(place.opening_hours.open_now ? "Open" : "Closed");
+          $("#brewery-phone").text(data.result.formatted_phone_number);
+          // $("#brewery-image").text(data.result.photos[0].photo_reference);
+          $("#brewery-website").html('<a href="' + data.result.website + '" target="_blank">Visit Website</a>');
+          console.log(data);
+        });
+        $("#brewery-open").text(place.opening_hours.open_now ? "Open" : "Closed");
+
+        // ======== Not Working - call to pull in image for card =============//
+
+        // var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+place.photos[0].photo_reference+"&key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM";
+        // //var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid="+place.place_id+"&key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM"
+        
+        
+        // $.ajax({
+        //   method: 'GET',
+        //   // url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid="+place.place_id+"&key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM"
+        //   url: queryURL          
+        // }).then(function(data) {
+        //     $("#brewery-image").html('<img src="' + queryURL + '">');
+        //     console.log(data);
+            
+        //   });
+        //   console.log("query url: " + queryURL);
+      
     });
   }
 })
