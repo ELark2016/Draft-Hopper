@@ -21,6 +21,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   var beerColor = childSnapshot.val().beerColor;
   var glassType = childSnapshot.val().glassType;
   var servingTemp = childSnapshot.val().servingTemp;
+  var beerImg = childSnapshot.val().beerImg;
 
   // removed class='active' from below a tag:
   var newTab = ("<li class='tab'>" + "<a href='#beer" + index + "'>" + beerStyle + "</a></li>");
@@ -35,7 +36,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
           <div class="col s12 m12">
             <div class="card horizontal"> <!--Center content in card-->
               <div class="card-image">
-                <img src="assets/images/beers/placeholder.jpg">
+                <img src="assets/images/beers/${beerImg}" width="150" height="350">
               </div>
               <div class="card-stacked">
                 <div class="card-content valign-wrapper">
