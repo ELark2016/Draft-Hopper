@@ -1,11 +1,34 @@
 /* Custom Stylesheet */
 
+/* Global
+-------------------------------------*/
 
+h2 {
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 110%;
+  margin: 0 0 1rem;
+}
 
 h4 {
   font-size: 2.28rem;
   line-height: 110%;
   margin: 1.14rem 0rem 0;
+}
+
+h5 {
+  margin: 0.82rem 0 2rem 0;
+}
+
+.container {
+  width: 95%;
+ }
+
+.icon-block .material-icons {
+  font-size: 2rem;
 }
 
 a {
@@ -16,25 +39,21 @@ a:hover {
   color: #2bbbad;
 }
 
-h5 {
-  margin: 0.82rem 0 2rem 0;
+.btn:hover {
+  color: #fff;
 }
 
 .divider {
   margin: 17px 0;
 }
 
-
 footer.page-footer {
   padding: 25px;
   margin: 0;
 }
 
-.container {
- width: 95%;
-}
-
-/* Nav */
+/* Nav
+-------------------------------------*/
 
 nav {
   width: 100%;
@@ -59,17 +78,6 @@ nav {
 .grey {
   background-color: #4B4337 !important;
 }
- 
- /* p {
-   line-height: 2rem;
- } */
-
-
-
-
-
-
-
 
 /* Map Section
 -------------------------------------*/
@@ -97,12 +105,21 @@ html, body {
   padding: 0rem;
 }
 
-.card {
-  margin: 0 0 0.5rem 0;
+.card, .card-medium {
+  padding: 0 0 0.5rem 0;
+}
+
+.horizontal {
+  margin: 15px auto 0;
 }
 
 .card-image {
   height: 100px;
+  overflow: hidden;
+}
+
+.beerImg {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -129,7 +146,7 @@ html, body {
 .collection .collection-item.avatar {
   min-height: 50px;
   padding-left: 0px;
-  /* position: relative; */
+  position: relative;
   display: flex;
 }
 
@@ -139,6 +156,14 @@ html, body {
   margin: 0 0 5px 5px;
   display: flex;
   align-self: flex-end;
+}
+
+.collection {
+  margin: 0.5rem 0 1rem 0;
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -192,6 +217,10 @@ html, body {
 /* Beer Style Tabs
 -------------------------------------*/
 
+.tabs {
+  background-color: #f5f5f5;
+}
+
 .tabs .tab a {
   color: #26a69a;
   display: block;
@@ -200,9 +229,13 @@ html, body {
   padding: 0 24px;
   font-size: 14px;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: auto;
   -webkit-transition: color .28s ease;
   transition: color .28s ease;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .tabs .tab a:hover, .tabs .tab a.active {
