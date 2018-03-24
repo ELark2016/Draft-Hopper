@@ -64,6 +64,7 @@ function initMap() {
         for (var i = 0; i < results.length; i++) {
           var place = results[i];
           createMarker(results[i]);
+          
         }
       }
     }
@@ -71,15 +72,25 @@ function initMap() {
     function createMarker(place) {
       var placeLoc = place.geometry.location;
       var marker = new google.maps.Marker({
+        animation: google.maps.Animation.DROP,
         map: map2,
         position: place.geometry.location
-    });
-  
-    google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
-    infowindow.open(map, this);
       });
-      }
+  
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name + "<br>" + place.formatted_address);
+        infowindow.open(map, this); 
+        $("#brewery-name").text(place.name);
+        $("#brewery-location").text(place.formatted_address);
+        $.ajax({
+          method: 'GET',
+          url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid="+place.place_id+"&key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM"
+        }).then(function(data) {
+            $("#phone-number").text(data.result.formatted_phone_number)
+        });
+        $("#open-now").text(place.opening_hours.open_now ? "Open" : "Closed");
+      });
+    }
 })
 
       

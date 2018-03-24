@@ -229,9 +229,13 @@ html, body {
   padding: 0 24px;
   font-size: 14px;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: auto;
   -webkit-transition: color .28s ease;
   transition: color .28s ease;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .tabs .tab a:hover, .tabs .tab a.active {

@@ -23,7 +23,8 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   var servingTemp = childSnapshot.val().servingTemp;
   var beerImg = childSnapshot.val().beerImg;
 
-  var newTab = ("<li class='tab'>" + "<a class='active' href='#beer" + index + "'>" + beerStyle + "</a></li>");
+  // removed class='active' from below a tag:
+  var newTab = ("<li class='tab'>" + "<a href='#beer" + index + "'>" + beerStyle + "</a></li>");
   var newRow = [`
       <div id="beer${index}" class="col s12">${beerStyle} at Index: ${index}</div>
   `];
