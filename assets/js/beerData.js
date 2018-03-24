@@ -22,7 +22,8 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   var glassType = childSnapshot.val().glassType;
   var servingTemp = childSnapshot.val().servingTemp;
 
-  var newTab = ("<li class='tab'>" + "<a class='active' href='#beer" + index + "'>" + beerStyle + "</a></li>");
+  // removed class='active' from below a tag:
+  var newTab = ("<li class='tab'>" + "<a href='#beer" + index + "'>" + beerStyle + "</a></li>");
   var newRow = [`
       <div id="beer${index}" class="col s12">${beerStyle} at Index: ${index}</div>
   `];
@@ -38,10 +39,10 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
               </div>
               <div class="card-stacked">
                 <div class="card-content valign-wrapper">
-                  <table>
+                  <table class="responsive-table">
                     <thead>
                       <tr>
-                        <th colspan="2">${beerStyle} Facts:</th>
+                        <th colspan="2"><h3>${beerStyle} Facts:</h3></th>
                       </tr>
                     </thead>
 
@@ -69,21 +70,18 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
                     </tbody>
                   </table>
                 </div>
-                
               </div>
             </div>
           </div>
-        </div>
-      
+        </div>     
       </div>
     `
   ];  
 
   $("#beerTabs").append(newTab);
   $("#beerInfo").append(newRow);
-  // $("#beerInfo").append(testRow);
   index++;
-  console.log(index);
+  // console.log(index);
   
   
 });
@@ -91,6 +89,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
 $(document).ready(function () {
     $('ul.tabs').tabs();
     $('ul.tabs').tabs('select_tab', beerStyle);
+
   });
 // $(document).ready(function(){
 //   $('.tabs').tabs();
