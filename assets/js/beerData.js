@@ -87,12 +87,3 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   
 });
 
-$(document).ready(function () {
-    $('ul.tabs').tabs();
-    $('ul.tabs').tabs('select_tab', beerStyle);
-
-  });
-// $(document).ready(function(){
-//   $('.tabs').tabs();
-// });
-
