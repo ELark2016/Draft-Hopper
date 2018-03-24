@@ -75,11 +75,12 @@ function initMap() {
         animation: google.maps.Animation.DROP,
         map: map2,
         position: place.geometry.location
+        
     });
     
   
     google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<strong>Rating: </strong>' + place.rating + '</div>');  
+    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<strong>Rating: </strong>' + place.rating + '<br><strong>Address: </strong>' + place.formatted_address + '</div>');  
     infowindow.open(map, this);
       });
       }
@@ -87,6 +88,7 @@ function initMap() {
       var userMarker = new google.maps.Marker({
         animation: google.maps.Animation.DROP,
         position: breweriesNearMe,
+        icon: 'assets/images/map-icons-master/src/icons/crosshairs.svg',
         map: map2
     });
 
