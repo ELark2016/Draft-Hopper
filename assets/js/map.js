@@ -64,6 +64,7 @@ function initMap() {
         for (var i = 0; i < results.length; i++) {
           var place = results[i];
           createMarker(results[i]);
+          
         }
       }
     }
@@ -71,15 +72,28 @@ function initMap() {
     function createMarker(place) {
       var placeLoc = place.geometry.location;
       var marker = new google.maps.Marker({
+        animation: google.maps.Animation.DROP,
         map: map2,
         position: place.geometry.location
     });
+    
   
     google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
+    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<strong>Rating: </strong>' + place.rating + '</div>');  
     infowindow.open(map, this);
       });
       }
+
+      var userMarker = new google.maps.Marker({
+        animation: google.maps.Animation.DROP,
+        position: breweriesNearMe,
+        map: map2
+    });
+
+    google.maps.event.addListener(userMarker, 'click', function() {
+      infowindow.setContent('<div><strong>YOU ARE HERE</strong></div>');  
+      infowindow.open(map, this);
+        });
 })
 
       
