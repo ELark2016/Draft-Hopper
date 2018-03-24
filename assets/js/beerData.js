@@ -30,60 +30,48 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   `];
   
   var newRow = [
-    `
-      <div id="beer${index}" class="col s12" style="display: none">
+    `<div id="beer${index}" class="col s12" style="display: none">
         <div class="row">
-          <div class="col s12 m12">
-            <div class="card horizontal"> <!--Center content in card-->
-              <div class="card-image">
-                <img src="assets/images/beers/${beerImg}" width="150" height="350">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content valign-wrapper">
-                  <table class="responsive-table">
-                    <thead>
-                      <tr>
-                        <th colspan="2"><h3>${beerStyle} Facts:</h3></th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>Body: </td>
-                        <td>${beerBody}</td>
-                      </tr>
-                      <tr>
-                        <td>Color: </td>
-                        <td>${beerColor}</td>
-                      </tr>                            
-                      <tr>
-                        <td>ABV: </td>
-                        <td>${beerABV}</td>
-                      </tr>
-                      <tr>
-                        <td>Glass Style: </td>
-                        <td>${glassType}</td>
-                      </tr>
-                      <tr>
-                        <td>Serving Temperature: </td>
-                        <td>${servingTemp}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>     
-      </div>
-    `
+          <div class="col s12 m12 valign-wrapper">
+          <div class="card horizontal flex-s">
+          <div class="card-image beerImg box-a">
+          <img src="assets/images/beers/${beerImg}" width="150" height="350">
+        </div>
+        <div class="card-content">
+          <span class="card-title">${beerStyle} Facts:</span>
+          <div class="divider"></div>
+          <table class="center-align">
+          <tbody>
+            <tr>
+              <td>Body:</td>
+              <td>${beerBody}</td>
+            </tr>
+            <tr>
+              <td>Color:</td>
+              <td>${beerColor}</td>
+            </tr>                            
+            <tr>
+              <td>ABV:</td>
+              <td>${beerABV}</td>
+            </tr>
+            <tr>
+              <td>Glass Style:</td>
+              <td>${glassType}</td>
+            </tr>
+            <tr>
+              <td>Serving Temperature:</td>
+              <td>${servingTemp}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>      
+    </div>
+  </div>
+</div>`
   ];  
 
   $("#beerTabs").append(newTab);
   $("#beerInfo").append(newRow);
   index++;
-  // console.log(index);
-  
-  
+  // console.log(index); 
 });
-
