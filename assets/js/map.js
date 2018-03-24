@@ -64,6 +64,7 @@ function initMap() {
         for (var i = 0; i < results.length; i++) {
           var place = results[i];
           createMarker(results[i]);
+          
         }
       }
     }
@@ -71,6 +72,7 @@ function initMap() {
     function createMarker(place) {
       var placeLoc = place.geometry.location;
       var marker = new google.maps.Marker({
+        animation: google.maps.Animation.DROP,
         map: map2,
         position: place.geometry.location
       });
