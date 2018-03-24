@@ -75,25 +75,22 @@ function initMap() {
         animation: google.maps.Animation.DROP,
         map: map2,
         position: place.geometry.location
-    });
-    
-  
-    google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + '<strong>Rating: </strong>' + place.rating + '</div>');  
-    infowindow.open(map, this);
       });
-      }
-
-      var userMarker = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position: breweriesNearMe,
-        map: map2
-    });
-
-    google.maps.event.addListener(userMarker, 'click', function() {
-      infowindow.setContent('<div><strong>YOU ARE HERE</strong></div>');  
-      infowindow.open(map, this);
+  
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(place.name + "<br>" + place.formatted_address);
+        infowindow.open(map, this); 
+        $("#brewery-name").text(place.name);
+        $("#brewery-location").text(place.formatted_address);
+        $.ajax({
+          method: 'GET',
+          url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?placeid="+place.place_id+"&key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM"
+        }).then(function(data) {
+            $("#phone-number").text(data.result.formatted_phone_number)
         });
+        $("#open-now").text(place.opening_hours.open_now ? "Open" : "Closed");
+      });
+    }
 })
 
       
