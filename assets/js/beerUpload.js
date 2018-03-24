@@ -20,6 +20,7 @@ $("#addBeer").on("click", function(event) {
   var beerColor = $("#beerColor").val().trim();
   var glassType = $("#glassType").val().trim();
   var servingTemp = $("#servingTemp").val().trim();
+  var beerImg = $("#beerImg").val().trim();
 
   //Temp obj for database upload
   var newStyle = {
@@ -28,7 +29,8 @@ $("#addBeer").on("click", function(event) {
     beerBody: beerBody,
     beerColor: beerColor,
     glassType: glassType,
-    servingTemp: servingTemp
+    servingTemp: servingTemp,
+    beerImg: beerImg
   };
 
   //Add new style to database
@@ -41,6 +43,7 @@ $("#addBeer").on("click", function(event) {
   $("#beerColor").val("");
   $("#glassType").val("");
   $("#servingTemp").val("");
+  $("#beerImg").val("");
 
   console.log("Style added!");
 
