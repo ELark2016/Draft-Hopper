@@ -21,6 +21,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   var beerColor = childSnapshot.val().beerColor;
   var glassType = childSnapshot.val().glassType;
   var servingTemp = childSnapshot.val().servingTemp;
+  var beerImg = childSnapshot.val().beerImg;
 
   var newTab = ("<li class='tab'>" + "<a class='active' href='#beer" + index + "'>" + beerStyle + "</a></li>");
   var newRow = [`
@@ -33,7 +34,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
           <div class="col s12 m12 valign-wrapper">
           <div class="card horizontal flex-s">
           <div class="card-image beerImg box-a">
-            <img src="https://drizly-products0.imgix.net/ci-bud-light-19699dcd3e7591e3.png?auto=format%2Ccompress&dpr=2&fm=jpeg&h=240&q=20">
+          <img src="assets/images/beers/${beerImg}" width="150" height="350">
         </div>
         <div class="card-content">
           <span class="card-title">${beerStyle} Facts:</span>
