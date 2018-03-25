@@ -12,6 +12,7 @@
 
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -38,8 +39,9 @@
         <div id="breweries" class="col s12 m4 box-a">
           <div class="card-medium">
             <div class="card-content">
-              <p class="intro-text light">Draft Hopper helps beer lovers find great craft breweries and tasting rooms around them, wherever they go. Specializing in breweries home grown in the Commonwealth of Virginia.</p>
+              <p class="intro-text light">Draft Hopper helps beer lovers <span class="callout">find great craft breweries</span> and tasting rooms around them, wherever they go. Specializing in breweries home grown <span class="callout">in the Commonwealth of Virginia.</span></p>
             </div>
+            <!-- <div class="divider"></div> -->
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width">
                 <li class="tab"><a class="active" href="#test1">Discover</a></li>
@@ -49,19 +51,19 @@
             </div>
             <div class="card-content grey lighten-4">
               <div id="test1" class="icon-block">
-                <h2 class="center"><i class="material-icons">lightbulb_outline</i></h2>
+                <h2 class="center"><i class="material-icons">location_on</i></h2>
                 <h3 class="center">Discover</h3>
-                <p class="light">Use your current location to find breweries no matter where you are. Click on a map pin to discover more about a brewery.</p>
+                <p class="less light">Use your current location to find breweries no matter where you are. Click on a map pin to discover more about a brewery.</p>
               </div>
               <div id="test2" class="icon-block">
                 <h2 class="center"><i class="material-icons">remove_red_eye</i></h2>
                 <h3 class="center">Learn</h3>
-                <p class="light">Read current news on Virginia Craft Beers and even learn about the history of craft beer.</p>
+                <p class="less light">Read current news on Virginia Craft Beers and even learn about the history of craft beer.</p>
               </div>
               <div id="test3" class="icon-block">
                 <h2 class="center"><i class="material-icons">favorite</i></h2>
                 <h3 class="center">Enjoy</h3>
-                <p class="light">Enjoy discovering new beer while hopping around to your local breweries.</p>
+                <p class="less light">Enjoy discovering new beer while hopping around to your local breweries.</p>
               </div>
             </div>
           </div>
@@ -99,7 +101,7 @@
 
   <section id="section index-banner" class="parallax-container">
     <div class="container">
-      <h2 class="header center teal-text lighten-1">Find Craft Breweries in Virginia</h2>
+      <h2 class="header center">Find Craft Breweries in Virginia</h2>
       <h5 class="center col s12 light">Discover the best local bars, breweries and tasting rooms around you and wherever you go.</h5>
     </div>
     <div class="parallax"><img src="assets/images/taps.jpg" alt="Unsplashed background img 1"></div>
@@ -134,7 +136,8 @@
         <div class="col s12"> 
           <div class="row">
             <div class="col s12 m6">
-              <h5 class="center">Brew News:</h5>
+              <h5 class="solid center">Brew News</h5>
+              <div class="grain"></div>
               <div id="feed"></div>
             </div>
             <div class="col s12 m6">
