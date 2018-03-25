@@ -34,13 +34,13 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
         <div class="row">
           <div class="col s12 m12 valign-wrapper">
           <div class="card horizontal flex-s">
-          <div class="card-image beerImg box-a">
+          <div class="beerImg box-a">
           <img src="assets/images/beers/${beerImg}" width="150" height="350">
         </div>
         <div class="card-content">
           <span class="card-title">${beerStyle} Facts:</span>
           <div class="divider"></div>
-          <table class="center-align">
+          <table>
           <tbody>
             <tr>
               <td>Body:</td>
@@ -59,7 +59,7 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
               <td>${glassType}</td>
             </tr>
             <tr>
-              <td>Serving Temperature:</td>
+              <td>Serving<br>Temperature:</td>
               <td>${servingTemp}</td>
             </tr>
           </tbody>

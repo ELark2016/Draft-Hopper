@@ -16,11 +16,15 @@ h3 {
 h4 {
   font-size: 2.28rem;
   line-height: 110%;
-  margin: 1.14rem 0rem 0;
+  margin: 1.14rem 0 2rem;
 }
 
 h5 {
   margin: 0.82rem 0 2rem 0;
+}
+
+p {
+  line-height: 2rem;
 }
 
 .container {
@@ -65,10 +69,22 @@ nav {
   color: #fff;
   background-color: #26a69a;
   text-align: center;
-  letter-spacing: .5px;
+  letter-spacing: .1rem;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
+  text-transform: none;
+}
+
+.btn, .btn-large,
+.btn-flat {
+  padding: 0 1rem;
+}
+
+nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+  margin-top: -2px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .btn:hover, .btn-large:hover {
@@ -85,7 +101,7 @@ nav {
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 #map {
   margin-top: 15px;
-  height: 400px;
+  height: 430px;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -96,9 +112,9 @@ html, body {
 }
 
 #breweries{ 
-  overflow: auto;
+  /* overflow: auto; */
   margin-top: 50px;
-  height: 365px;
+  /* height: 410px; */
 }
 
 .collapsible-body {
@@ -118,13 +134,22 @@ html, body {
   overflow: hidden;
 }
 
+.card.horizontal .card-image {
+  max-width: 100%;
+  background-color: #2bbbad;
+}
+
 .beerImg {
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .card .card-content {
   padding: 20px 20px 0;
+}
+
+.intro-text {
+  font-size: 1.2rem;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
@@ -198,13 +223,16 @@ html, body {
 }
 
 .header {
-  padding-top: 25px;
+  padding-top: 65px;
 }
 
 @media only screen and (max-width : 992px) {
   h2 {
     font-size: 2.56rem;
-    margin-top: 75px;
+  }
+  
+  .header {
+    padding-top: 60px;
   }
 }
 
@@ -212,6 +240,10 @@ html, body {
   #index-banner .section {
     top: 0;
   }
+
+  .header {
+    padding-top: 40px;
+}
 }
 
 /* Beer Style Tabs
