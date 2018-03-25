@@ -25,16 +25,9 @@
   <nav class="grey" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo left"><img src="assets/images/logo_yellow.png" alt="" width="150"></a>
-      <div class="show-on-medium-and-up hide-on-small-only">
-        <ul class="near-me right">
-          <li><a id="location-finder" class="btn">Breweries Near Me</a></li>
-        </ul>
-      </div>
-      <div class="hide-on-med-and-up show-on-small">
-        <ul class="near-me right">
-          <li><a id="location-finder" class="btn"><i class="material-icons right">near_me</i>Breweries</a></li>
-        </ul>
-      </div>
+      <ul class="near-me right">
+        <li><a id="location-finder" class="btn">Breweries Near Me</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -45,7 +38,7 @@
         <div id="breweries" class="col s12 m4 box-a">
           <div class="card-medium">
             <div class="card-content">
-              <p>Draft Hopper helps beer lovers find great craft breweries and tasting rooms around them, wherever they go. Specializing in breweries home grown in the Commonwealth of Virginia.</p>
+              <p class="intro-text light">Draft Hopper helps beer lovers find great craft breweries and tasting rooms around them, wherever they go. Specializing in breweries home grown in the Commonwealth of Virginia.</p>
             </div>
             <div class="card-tabs">
               <ul class="tabs tabs-fixed-width">
@@ -61,9 +54,10 @@
                 <p class="light">Use your current location to find breweries no matter where you are. Click on a map pin to discover more about a brewery.</p>
               </div>
               <div id="test2" class="icon-block">
-                  <h2 class="center"><i class="material-icons">remove_red_eye</i></h2>
-                  <h3 class="center">Learn</h3>
-                  <p class="light">Read current news on Virginia Craft Beers and even learn about the history of craft beer.</p></div>
+                <h2 class="center"><i class="material-icons">remove_red_eye</i></h2>
+                <h3 class="center">Learn</h3>
+                <p class="light">Read current news on Virginia Craft Beers and even learn about the history of craft beer.</p>
+              </div>
               <div id="test3" class="icon-block">
                 <h2 class="center"><i class="material-icons">favorite</i></h2>
                 <h3 class="center">Enjoy</h3>
@@ -72,30 +66,28 @@
             </div>
           </div>
           
+
           <div class="card">
-            <div class="card-image" id="brewery-image">
-            </div>
-            
-            <div class="new-card-content">
+            <div class="card-image" id="brewery-image"><img src="assets/images/beers.jpg"></div>
+            <div class="card-content">
               <div class="card-title" id="brewery-name"></div>
               <ul class="collection">
-                    <li class="collection-item avatar">
-                    <i class="material-icons">location_on</i>
-                    <span class="title" id="brewery-address"></span>
-                  </li>
-                  <li class="collection-item avatar">
-                    <i class="material-icons">local_phone</i>
-                    <span class="title" id="brewery-phone"></span>
-                  </li>
-                  <li class="collection-item avatar">
-                    <i class="material-icons">access_time</i>
-                    <span class="title" id="brewery-open"></span>
-                  </li>
-                </ul>
+                <li class="collection-item avatar">
+                  <i class="material-icons">location_on</i>
+                  <span class="title" id="brewery-address"></span>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons">local_phone</i>
+                  <span class="title" id="brewery-phone"></span>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons">access_time</i>
+                  <span class="title" id="brewery-open"></span>
+                </li>
+              </ul>
             </div>
             <div class="card-action" id="brewery-website"></div>
           </div>
-
         </div>
         <div class="col s12 m8 box-b">
           <div id="map"></div>
@@ -108,7 +100,7 @@
   <section id="section index-banner" class="parallax-container">
     <div class="container">
       <h2 class="header center teal-text lighten-1">Find Craft Breweries in Virginia</h2>
-      <h5 class="header center col s12 light">Discover the best local bars, breweries and tasting rooms around you and wherever you go.</h5>
+      <h5 class="center col s12 light">Discover the best local bars, breweries and tasting rooms around you and wherever you go.</h5>
     </div>
     <div class="parallax"><img src="assets/images/taps.jpg" alt="Unsplashed background img 1"></div>
   </section>
@@ -160,7 +152,7 @@
   <footer class="page-footer grey">
     <div class="footer-copyright">
       <div class="container">
-        &copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img src="assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" target="_blank">Admin</a>
+        &copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/ELark2016/Draft-Hopper"><img src="assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://elark2016.github.io/Draft-Hopper/assets/pages/beerInfo.html" target="_blank">Admin</a>
       </div>
     </div>
   </footer>
