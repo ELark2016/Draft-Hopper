@@ -1,3 +1,5 @@
+![Alt text](/assets/images/beerHopperBarCenter?raw=true "Beer Hopper")
+
 # Draft Hopper :beer:
 Draft Hopper helps beer lovers find great craft breweries and tasting rooms around them, wherever they go. Specializing in breweries home grown in the Commonwealth of Virginia.
 
