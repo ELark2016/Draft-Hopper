@@ -11,10 +11,10 @@ Draft Hopper helps beer lovers find great craft breweries and tasting rooms arou
 
 ### Meet the team!
 
-*[**Kristin Iacone**](https://github.com/kiacone)
-*[**Liz Lark**](https://github.com/ELark2016)
-*[**Scott Peterson**](https://github.com/scottpetersonva)
-*[**Topher Sympson**](https://github.com/tophersymps)
+* [**Kristin Iacone**](https://github.com/kiacone)
+* [**Liz Lark**](https://github.com/ELark2016)
+* [**Scott Peterson**](https://github.com/scottpetersonva)
+* [**Topher Sympson**](https://github.com/tophersymps)
 
 ### Project Built With
 
