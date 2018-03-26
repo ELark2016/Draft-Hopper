@@ -9,6 +9,13 @@ Draft Hopper helps beer lovers find great craft breweries and tasting rooms arou
 
 [View Keynote](https://elark2016.github.io/Draft-Hopper/draft-hopper.pdf)
 
+### Meet the team!
+
+*[**Kristin Iacone**](https://github.com/kiacone)
+*[**Liz Lark**](https://github.com/ELark2016)
+*[**Scott Peterson**](https://github.com/scottpetersonva)
+*[**Topher Sympson**](https://github.com/tophersymps)
+
 ### Project Built With
 
 HTML5 | CSS3 | JavaScript | jQuery | Firebase | Ajax |  Materialize CSS Framework | Google Places Library
@@ -17,21 +24,3 @@ HTML5 | CSS3 | JavaScript | jQuery | Firebase | Ajax |  Materialize CSS Framewor
 * Google Maps
 * Google Places
 * RSS2json
-
-
-
-
-
-
-
-
-
-# Draft-Hopper
-Brewery finder app specializing in breweries in the Commonwealth of Virginia.
-
-##Team Members
-Kristin Iacone
-Liz Lark
-Scott Peterson
-Topher Sympson
-
