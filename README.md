@@ -1,6 +1,4 @@
 ![Alt text](/assets/images/beerHopperBarCenter.png?raw=true "Beer Hopper")
-
-# Draft Hopper :beer:
 Draft Hopper helps beer lovers find great craft breweries and tasting rooms around them, wherever they go. Specializing in breweries home grown in the Commonwealth of Virginia.
 
 [View the Project](https://elark2016.github.io/Draft-Hopper/)
@@ -17,10 +15,6 @@ Draft Hopper helps beer lovers find great craft breweries and tasting rooms arou
 * [**Liz Lark**](https://github.com/ELark2016)
 * [**Scott Peterson**](https://github.com/scottpetersonva)
 * [**Topher Sympson**](https://github.com/tophersymps)
-
-Kristin Iacone | Liz Lark | Scott Peterson | Topher Sympson
------------- | ------------- | ------------- | -------------
-[GitHub](https://github.com/kiacone) | [GitHub](https://github.com/ELark2016) | [GitHub](https://github.com/scottpetersonva) | [GitHub](https://github.com/tophersymps) |
 
 ### Project Built With
 
