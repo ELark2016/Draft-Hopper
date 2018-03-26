@@ -5,6 +5,10 @@
 
 h2 {
   margin: 0;
+  font-size: 2.8rem;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 h3 {
@@ -16,11 +20,23 @@ h3 {
 h4 {
   font-size: 2.28rem;
   line-height: 110%;
-  margin: 1.14rem 0rem 0;
+  margin: 1.14rem 0 2rem;
 }
 
 h5 {
-  margin: 0.82rem 0 2rem 0;
+  margin: 0.82rem 0 0rem 0;
+  opacity: 0.9;
+}
+
+p {
+  line-height: 2rem;
+}
+.less {
+  line-height: 1.4rem;
+}
+
+.solid {
+  opacity: 1;
 }
 
 .container {
@@ -47,6 +63,17 @@ a:hover {
   margin: 17px 0;
 }
 
+.grain {
+  width: 100%;
+  height: 50px;
+  background-image: url('../images/wheat.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+  }
+
 footer.page-footer {
   padding: 25px;
   margin: 0;
@@ -65,10 +92,22 @@ nav {
   color: #fff;
   background-color: #26a69a;
   text-align: center;
-  letter-spacing: .5px;
+  letter-spacing: 0;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn, .btn-large,
+.btn-flat {
+  padding: 0 1rem;
+}
+
+nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+  margin-top: -2px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .btn:hover, .btn-large:hover {
@@ -85,7 +124,7 @@ nav {
 /* Always set the map height explicitly to define the size of the div element that contains the map. */
 #map {
   margin-top: 15px;
-  height: 400px;
+  height: 430px;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -96,9 +135,9 @@ html, body {
 }
 
 #breweries{ 
-  overflow: auto;
+  /* overflow: auto; */
   margin-top: 50px;
-  height: 365px;
+  /* height: 410px; */
 }
 
 .collapsible-body {
@@ -118,13 +157,29 @@ html, body {
   overflow: hidden;
 }
 
+.card.horizontal .card-image {
+  max-width: 100%;
+  background-color: #2bbbad;
+}
+
 .beerImg {
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .card .card-content {
   padding: 20px 20px 0;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+}
+
+.callout {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.6rem;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
@@ -198,19 +253,32 @@ html, body {
 }
 
 .header {
-  padding-top: 25px;
+  padding-top: 65px;
 }
 
 @media only screen and (max-width : 992px) {
   h2 {
     font-size: 2.56rem;
-    margin-top: 75px;
+  }
+  
+  .header {
+    padding-top: 60px;
   }
 }
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
+  }
+
+  h5 {
+    margin: 1.2rem 1rem 0;
+    font-size: 1.4rem;
+    opacity: 0.9;
+  }
+
+  .header {
+    padding-top: 40px;
   }
 }
 
